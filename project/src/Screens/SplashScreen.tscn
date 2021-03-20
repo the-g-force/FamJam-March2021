@@ -27,6 +27,30 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector2( -76, 450 ), Vector2( 316.266, 450 ), Vector2( 1100, 450 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("sub1/sub3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.8, 1.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -402.611, 55.3264 ), Vector2( -371.443, -71.2948 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("sub1/sub2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 0.659752 ),
+"update": 0,
+"values": [ Vector2( -174.693, -330.381 ), Vector2( -186.381, -279.733 ) ]
+}
 
 [node name="Splashscreen" type="Control"]
 anchor_right = 1.0
@@ -67,15 +91,15 @@ __meta__ = {
 }
 
 [node name="sub1" type="Sprite" parent="."]
-position = Vector2( 1100, 450 )
+position = Vector2( 408.47, 450 )
 texture = ExtResource( 4 )
 
 [node name="sub3" type="Sprite" parent="sub1"]
-position = Vector2( -402.611, 55.3264 )
+position = Vector2( -394.819, 23.6711 )
 texture = ExtResource( 6 )
 
 [node name="sub2" type="Sprite" parent="sub1"]
-position = Vector2( -186.381, -328.433 )
+position = Vector2( -186.381, -279.733 )
 texture = ExtResource( 5 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
