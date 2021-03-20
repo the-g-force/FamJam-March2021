@@ -3,7 +3,8 @@ extends Area2D
 
 signal selected
 
-export var _speed := 200
+export var _speed := 100
+export var _health := 1
 
 var _screensize := Vector2.ZERO
 var _screen_center := Vector2.ZERO
@@ -16,7 +17,7 @@ func _ready()->void:
 	_screensize = get_viewport_rect().size
 	_screen_center = _screensize/2
 	_direction = _screen_center-get_global_transform().origin
-	_sprite.rotation = _direction.angle()+0.5*PI
+	_sprite.rotation = _direction.angle()
 
 
 func _process(delta)->void:
@@ -33,3 +34,10 @@ func _on_Enemy_input_event(_viewport, event, _shape_idx)->void:
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
+
+
+func _on_Enemy_body_entered(body:PhysicsBody2D)->void:
+	if body is Projectile:
+		_health -= 1
+		if _health <= 0:
+			queue_free()
