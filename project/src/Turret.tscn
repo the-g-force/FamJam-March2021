@@ -8,4 +8,8 @@ script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
-offset = Vector2( 0, -3 )
+offset = Vector2( 2, 0 )
+
+[node name="ShotTimer" type="Timer" parent="."]
+autostart = true
+[connection signal="timeout" from="ShotTimer" to="." method="_on_ShotTimer_timeout"]
