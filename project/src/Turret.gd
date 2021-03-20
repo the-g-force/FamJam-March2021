@@ -5,8 +5,13 @@ const _Projectile := preload("res://src/Projectile.tscn")
 # In radians per second
 export var rotation_speed := 0.1
 
+# How close can we be, in radians, to target rotation, before we start shooting
+export var epsilon := 0.01
+
 # The node to track toward
-var target : Node2D
+var target : Node2D setget _set_target
+
+onready var _shot_timer := $ShotTimer
 
 
 func _physics_process(_delta):
@@ -19,6 +24,9 @@ func _physics_process(_delta):
 		rotate(max(full_amount, -rotation_speed))
 	else:
 		rotate(min(full_amount, rotation_speed))
+	
+	if _shot_timer.time_left == 0 and abs(rotation - target_rotation) < epsilon:
+			_fire()
 	
 	
 
@@ -36,13 +44,24 @@ func _short_angle_dist(from, to)->float:
 	return fmod(2 * difference, max_angle) - difference
 
 
-func _on_ShotTimer_timeout():
-	if target != null:
-		var projectile := _Projectile.instance()
-		projectile.position = position
-		projectile.rotation = rotation
-		get_parent().add_child(projectile)
-		
+func _fire():
+	var projectile := _Projectile.instance()
+	projectile.position = position
+	projectile.rotation = rotation
+	get_parent().add_child(projectile)
+	_shot_timer.start()
+
 
 func damage():
 	print("I WAS HURT")
+
+
+func _set_target(value:Node2D)->void:
+	target = value
+	if not value.is_connected("tree_exiting", self, "_on_target_tree_exiting"):
+		var _ignored := target.connect("tree_exiting", self, "_on_target_tree_exiting", [target], CONNECT_ONESHOT)
+
+
+func _on_target_tree_exiting(exiting_target):
+	if target == exiting_target:
+		target = null
