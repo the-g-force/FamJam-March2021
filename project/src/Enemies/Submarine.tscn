@@ -5,8 +5,8 @@
 [ext_resource path="res://src/Enemies/DamagedSubmarine.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 29.0
-height = 97.0
+radius = 56.9998
+height = 41.0003
 
 [node name="Submarine" type="KinematicBody2D"]
 script = ExtResource( 2 )
