@@ -29,11 +29,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="7.8699998"
-     inkscape:cx="-315.05402"
-     inkscape:cy="296.24892"
+     inkscape:zoom="90.509668"
+     inkscape:cx="255.08317"
+     inkscape:cy="332.03172"
      inkscape:document-units="px"
-     inkscape:current-layer="g879"
+     inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
      inkscape:window-width="1680"
@@ -51,7 +51,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -77,117 +77,72 @@
        y="139.95168"
        x="-115.90541"
        id="image827"
-       xlink:href="data:image/png;base64,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
-"
+       xlink:href="data:image/png;base64,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 "
        style="image-rendering:optimizeQuality"
        preserveAspectRatio="none"
        height="16.933332"
        width="39.6875" />
     <g
-       id="g879"
-       transform="rotate(90,-5.1017209,132.39183)"
-       inkscape:export-filename="/home/jkg/Documents/projects/game-jam-family/FamJam-March2021/project/assets/Images/turret.png"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96">
-      <g
-         id="g900">
-        <rect
-           style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-           id="rect839"
-           width="13.229167"
-           height="13.229167"
-           x="72.877083"
-           y="211.89658"
-           inkscape:export-filename="/home/jkg/Documents/projects/game-jam-family/FamJam-March2021/project/assets/Images/turret.png"
-           inkscape:export-xdpi="96"
-           inkscape:export-ydpi="96" />
-        <ellipse
-           cy="219.32518"
-           cx="79.491669"
-           id="circle830"
-           style="opacity:1;vector-effect:none;fill:#8a908d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.88888836;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-           rx="5.7819891"
-           ry="5.8005638"
-           inkscape:export-filename="/home/jkg/Documents/projects/game-jam-family/FamJam-March2021/project/assets/Images/turret.png"
-           inkscape:export-xdpi="96"
-           inkscape:export-ydpi="96" />
-        <path
-           inkscape:transform-center-y="-0.03361923"
-           inkscape:transform-center-x="1.2775307"
-           style="opacity:1;vector-effect:none;fill:#727875;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.88931417;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-           d="m 79.491669,215.28292 a 5.7819892,4.9213914 0 0 0 -5.758652,4.52678 5.7819892,5.8005637 0 0 0 5.758652,5.31605 5.7819892,5.8005637 0 0 0 5.758651,-5.33343 5.7819892,4.9213914 0 0 0 -5.758651,-4.5094 z"
-           id="circle832"
-           inkscape:connector-curvature="0"
-           inkscape:export-filename="/home/jkg/Documents/projects/game-jam-family/FamJam-March2021/project/assets/Images/turret.png"
-           inkscape:export-xdpi="96"
-           inkscape:export-ydpi="96" />
-        <ellipse
-           style="opacity:1;vector-effect:none;fill:#00aa44;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.592592;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-           id="path817"
-           cx="79.491669"
-           cy="219.32518"
-           rx="3.3728271"
-           ry="3.3836625"
-           inkscape:export-filename="/home/jkg/Documents/projects/game-jam-family/FamJam-March2021/project/assets/Images/turret.png"
-           inkscape:export-xdpi="96"
-           inkscape:export-ydpi="96" />
-        <rect
-           inkscape:transform-center-y="-0.03361923"
-           inkscape:transform-center-x="-6.2195575"
-           style="opacity:1;vector-effect:none;fill:#8a908d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.61099076;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-           id="rect834"
-           width="1.495298"
-           height="2.625504"
-           x="78.744019"
-           y="211.89658"
-           inkscape:export-filename="/home/jkg/Documents/projects/game-jam-family/FamJam-March2021/project/assets/Images/turret.png"
-           inkscape:export-xdpi="96"
-           inkscape:export-ydpi="96" />
-      </g>
+       id="g900"
+       transform="rotate(90,-14.991033,268.36988)">
+      <rect
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:export-filename="/home/jkg/Documents/projects/game-jam-family/FamJam-March2021/project/assets/Images/turret.png"
+         y="211.89658"
+         x="72.877083"
+         height="13.229167"
+         width="13.229167"
+         id="rect839"
+         style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke" />
+      <ellipse
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:export-filename="/home/jkg/Documents/projects/game-jam-family/FamJam-March2021/project/assets/Images/turret.png"
+         ry="5.8005638"
+         rx="5.7819891"
+         style="opacity:1;vector-effect:none;fill:#8a908d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.88888836;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+         id="circle830"
+         cx="79.491669"
+         cy="219.32518" />
+      <path
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:export-filename="/home/jkg/Documents/projects/game-jam-family/FamJam-March2021/project/assets/Images/turret.png"
+         inkscape:connector-curvature="0"
+         id="circle832"
+         d="m 79.491669,215.28292 a 5.7819892,4.9213914 0 0 0 -5.758652,4.52678 5.7819892,5.8005637 0 0 0 5.758652,5.31605 5.7819892,5.8005637 0 0 0 5.758651,-5.33343 5.7819892,4.9213914 0 0 0 -5.758651,-4.5094 z"
+         style="opacity:1;vector-effect:none;fill:#727875;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.88931417;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+         inkscape:transform-center-x="1.2775307"
+         inkscape:transform-center-y="-0.03361923" />
+      <ellipse
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:export-filename="/home/jkg/Documents/projects/game-jam-family/FamJam-March2021/project/assets/Images/turret.png"
+         ry="3.3836625"
+         rx="3.3728271"
+         cy="219.32518"
+         cx="79.491669"
+         id="path817"
+         style="opacity:1;vector-effect:none;fill:#00aa44;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.592592;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke" />
+      <rect
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:export-filename="/home/jkg/Documents/projects/game-jam-family/FamJam-March2021/project/assets/Images/turret.png"
+         y="211.89658"
+         x="78.744019"
+         height="2.625504"
+         width="1.495298"
+         id="rect834"
+         style="opacity:1;vector-effect:none;fill:#8a908d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.61099076;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+         inkscape:transform-center-x="-6.2195575"
+         inkscape:transform-center-y="-0.03361923" />
     </g>
+    <path
+       inkscape:connector-curvature="0"
+       id="path848"
+       d="m 67.218561,206.04119 c -0.363781,-1.8e-4 -0.658718,0.69012 -0.658695,1.54168 2.87e-4,0.54457 0.123292,1.10392 0.323587,1.38091 l -0.455678,0.133 -0.02482,1.05053 0.393418,0.0173 0.389828,-0.74396 0.359647,0.74515 0.457888,0.007 -0.0053,-1.03662 -0.495285,-0.16434 c 0.228261,-0.25621 0.37358,-0.79602 0.373817,-1.3886 2.3e-5,-0.85129 -0.294733,-1.54148 -0.658397,-1.54168 z"
+       style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.3379581;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       sodipodi:nodetypes="cccccccccccccc" />
   </g>
 </svg>
