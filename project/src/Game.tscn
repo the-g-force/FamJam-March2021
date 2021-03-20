@@ -1,8 +1,37 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/Turret.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/EnemyGenerator.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Game.gd" type="Script" id=3]
+[ext_resource path="res://src/Screens/GameOver.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "GameOver"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 2.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 2.5, 3.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 3 )
@@ -15,5 +44,18 @@ position = Vector2( 300, 300 )
 [node name="EnemyGenerator" parent="." instance=ExtResource( 2 )]
 position = Vector2( 300, 300 )
 radius = 424.0
+
+[node name="Control" type="Control" parent="."]
+visible = false
+margin_right = 600.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameOver" parent="Control" instance=ExtResource( 4 )]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/GameOver = SubResource( 1 )
 [connection signal="dead" from="Turret" to="." method="_on_Turret_dead"]
 [connection signal="spawn_enemy" from="EnemyGenerator" to="." method="_on_EnemyGenerator_spawn_enemy"]

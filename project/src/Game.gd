@@ -40,3 +40,4 @@ func _game_over()->void:
 	explosion.emitting = true
 	_turret.queue_free()
 	_is_game_over = true
+	$AnimationPlayer.play("GameOver")
