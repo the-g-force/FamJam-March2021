@@ -24,6 +24,7 @@ func _on_Enemy_selected(enemy:Enemy)->void:
 		
 
 func _on_Enemy_damaged(new_node:Enemy, score)->void:
+	$EnemyHitSound.play()
 	_score += score
 	_score_label.text = "Score: "+str(_score)
 	if new_node != null:
@@ -36,6 +37,7 @@ func _on_EnemyGenerator_spawn_enemy(enemy:Enemy)->void:
 
 
 func _on_Turret_dead()->void:
+	$TurretDeadSound.play()
 	_game_over()
 
 

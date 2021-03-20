@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/Turret.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/EnemyGenerator.tscn" type="PackedScene" id=2]
@@ -6,6 +6,9 @@
 [ext_resource path="res://src/Screens/GameOver.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/Images/background.png" type="Texture" id=5]
 [ext_resource path="res://assets/fonts/ButtonFont.tres" type="DynamicFont" id=6]
+[ext_resource path="res://assets/music/main_theme.ogg" type="AudioStream" id=7]
+[ext_resource path="res://assets/sfx/enemy_hit.wav" type="AudioStream" id=8]
+[ext_resource path="res://assets/sfx/turret_explode.wav" type="AudioStream" id=9]
 
 [sub_resource type="Animation" id=1]
 resource_name = "GameOver"
@@ -108,6 +111,17 @@ text = "Health: 3"
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
+bus = "Music"
+
+[node name="EnemyHitSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="TurretDeadSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
 [connection signal="damaged" from="Turret" to="." method="_on_Turret_damaged"]
 [connection signal="dead" from="Turret" to="." method="_on_Turret_dead"]
 [connection signal="spawn_enemy" from="EnemyGenerator" to="." method="_on_EnemyGenerator_spawn_enemy"]
