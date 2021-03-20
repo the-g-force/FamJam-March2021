@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/Screens/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://src/Game.tscn" type="PackedScene" id=2]
@@ -6,9 +6,14 @@
 [ext_resource path="res://assets/Images/turret-BIG.png" type="Texture" id=4]
 [ext_resource path="res://assets/Images/torpedo-BIG.png" type="Texture" id=5]
 [ext_resource path="res://assets/music/daniel_song.ogg" type="AudioStream" id=6]
+[ext_resource path="res://assets/styles/ButtonStyleHover.tres" type="StyleBox" id=7]
+[ext_resource path="res://assets/styles/ButtonStylePressed.tres" type="StyleBox" id=8]
+[ext_resource path="res://assets/styles/ButtonStyleNormal.tres" type="StyleBox" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 58
+outline_size = 3
+outline_color = Color( 0.639216, 0.741176, 0.00392157, 1 )
 font_data = ExtResource( 3 )
 
 [sub_resource type="Animation" id=2]
@@ -164,10 +169,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -37.0
-margin_top = -92.0
-margin_right = 37.0
-margin_bottom = -72.0
+margin_left = -62.0
+margin_top = -101.0
+margin_right = 62.0
+margin_bottom = -69.0
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 8 )
+custom_styles/normal = ExtResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Play Now!"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -183,6 +192,7 @@ margin_top = -161.5
 margin_right = 300.0
 margin_bottom = -82.5
 custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.2, 0.2, 0.2, 1 )
 text = "Turretle 2000"
 align = 1
 __meta__ = {
@@ -196,28 +206,25 @@ autoplay = "turret rotate"
 
 [node name="torpedo-BIG" type="Sprite" parent="."]
 visible = false
-position = Vector2( 450.781, 290.648 )
+position = Vector2( 544.574, 233.177 )
 rotation = -0.605629
-z_index = -1
 texture = ExtResource( 5 )
 
 [node name="torpedo-BIG2" type="Sprite" parent="."]
 visible = false
-position = Vector2( 648.422, 497.853 )
+position = Vector2( 467.807, 437.069 )
 rotation = 0.326377
-z_index = -1
 texture = ExtResource( 5 )
 
 [node name="torpedo-BIG3" type="Sprite" parent="."]
 visible = false
-position = Vector2( 56.9688, 225.468 )
+position = Vector2( -48.8086, 170.026 )
 rotation = -2.61101
-z_index = -1
 texture = ExtResource( 5 )
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2( 306.75, 375.565 )
-rotation = 0.752761
+rotation = -1.75386
 
 [node name="turret-BIG" type="Sprite" parent="Node2D"]
 position = Vector2( -0.761444, -1.72195 )
