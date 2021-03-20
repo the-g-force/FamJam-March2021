@@ -1,9 +1,5 @@
-# FamJam-Template
+# Fonts
 
-This template has the following attributes:  
-- A .gitignore file
-- A .gitattributes file
-- A splashscreen as the main scene
-- Window stretch set to keep
-- HTML5 export
-- The standard FamJam filesystem
+- Mrs Sheppards, designed by Sudtipos
+
+- Ruslan Display, designed by Denis Masharov
