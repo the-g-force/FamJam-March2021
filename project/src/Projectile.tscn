@@ -7,6 +7,7 @@
 radius = 5.57579
 
 [node name="Projectile" type="KinematicBody2D"]
+collision_layer = 0
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]

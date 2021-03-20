@@ -13,4 +13,6 @@ position = Vector2( 300, 300 )
 [node name="Enemies" type="Node" parent="."]
 
 [node name="EnemyGenerator" parent="." instance=ExtResource( 2 )]
+position = Vector2( 300, 300 )
+radius = 424.0
 [connection signal="spawn_enemy" from="EnemyGenerator" to="." method="_on_EnemyGenerator_spawn_enemy"]

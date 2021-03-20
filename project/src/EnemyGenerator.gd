@@ -4,7 +4,7 @@ signal spawn_enemy(enemy)
 
 const _ENEMY := preload("res://src/Enemy.tscn")
 
-onready var _enemy_spawn_point := $Path2D/EnemySpawnPoint
+export var radius := 150.0
 
 
 func _on_Timer_timeout()->void:
@@ -13,6 +13,9 @@ func _on_Timer_timeout()->void:
 
 func _spawn_enemy()->void:
 	var enemy := _ENEMY.instance()
-	_enemy_spawn_point.unit_offset = rand_range(0,1)
-	enemy.position = _enemy_spawn_point.get_global_transform().origin
+	var theta := rand_range(0, TAU)
+	
+	enemy.position = get_global_transform().origin + radius * Vector2(cos(theta),sin(theta))
+	
+	enemy.rotation = theta - PI
 	emit_signal("spawn_enemy", enemy)

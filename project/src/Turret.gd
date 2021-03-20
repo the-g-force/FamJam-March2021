@@ -43,3 +43,6 @@ func _on_ShotTimer_timeout():
 		projectile.rotation = rotation
 		get_parent().add_child(projectile)
 		
+
+func damage():
+	print("I WAS HURT")

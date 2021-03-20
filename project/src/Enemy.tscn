@@ -7,6 +7,11 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "Sub2",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "Sub3",
@@ -16,17 +21,14 @@ animations = [ {
 "loop": true,
 "name": "Sub1",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "Sub2",
-"speed": 5.0
 } ]
 
-[sub_resource type="CircleShape2D" id=2]
-radius = 25.02
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 15.0
+height = 56.0
 
-[node name="Enemy" type="Area2D"]
+[node name="Enemy" type="KinematicBody2D"]
+collision_mask = 2147483650
 script = ExtResource( 2 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
@@ -34,9 +36,13 @@ frames = SubResource( 1 )
 animation = "Sub1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
 shape = SubResource( 2 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
-[connection signal="body_entered" from="." to="." method="_on_Enemy_body_entered"]
-[connection signal="input_event" from="." to="." method="_on_Enemy_input_event"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
+[connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
