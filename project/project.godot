@@ -20,7 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="NewProject"
+config/name="FamJam-March2021"
 run/main_scene="res://src/SplashScreen.tscn"
 config/icon="res://assets/icon.png"
 
