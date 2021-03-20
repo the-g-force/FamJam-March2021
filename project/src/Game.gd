@@ -7,7 +7,6 @@ onready var _enemies := $Enemies
 func _ready():
 	var enemy := preload("res://src/Enemy.tscn").instance()
 	enemy.position = Vector2(100,150)
-	_add_enemy(enemy)
 
 
 func _add_enemy(enemy:Enemy)->void:
@@ -17,3 +16,7 @@ func _add_enemy(enemy:Enemy)->void:
 
 func _on_Enemy_selected(enemy:Enemy)->void:
 	_turret.target = enemy
+
+
+func _on_EnemyGenerator_spawn_enemy(enemy:Enemy)->void:
+	_add_enemy(enemy)

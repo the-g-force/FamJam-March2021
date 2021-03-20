@@ -29,3 +29,7 @@ func _on_Enemy_input_event(_viewport, event, _shape_idx)->void:
 		var e := event as InputEventMouseButton
 		if e.pressed:
 			emit_signal("selected")
+
+
+func _on_VisibilityNotifier2D_screen_exited():
+	queue_free()

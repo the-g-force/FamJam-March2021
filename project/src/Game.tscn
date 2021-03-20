@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/Turret.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/EnemyGenerator.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Game.gd" type="Script" id=3]
 
 [node name="Game" type="Node2D"]
@@ -10,3 +11,6 @@ script = ExtResource( 3 )
 position = Vector2( 534, 304 )
 
 [node name="Enemies" type="Node" parent="."]
+
+[node name="EnemyGenerator" parent="." instance=ExtResource( 2 )]
+[connection signal="spawn_enemy" from="EnemyGenerator" to="." method="_on_EnemyGenerator_spawn_enemy"]
