@@ -30,6 +30,10 @@ config/name="Turretle 2000"
 run/main_scene="res://src/Screens/SplashScreen.tscn"
 config/icon="res://assets/icon.png"
 
+[audio]
+
+output_latency.web=35
+
 [debug]
 
 gdscript/warnings/return_value_discarded=false
