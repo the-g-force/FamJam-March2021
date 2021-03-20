@@ -1,5 +1,7 @@
 extends Node2D
 
+signal dead
+
 const _Projectile := preload("res://src/Projectile.tscn")
 
 # In radians per second
@@ -7,6 +9,7 @@ export var rotation_speed := 0.1
 
 # How close can we be, in radians, to target rotation, before we start shooting
 export var epsilon := 0.01
+export var health := 3
 
 # The node to track toward
 var target : Node2D
@@ -52,4 +55,6 @@ func _fire():
 
 
 func damage():
-	print("I WAS HURT")
+	health -= 1
+	if health <= 0:
+		emit_signal("dead")

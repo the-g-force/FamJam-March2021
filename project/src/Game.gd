@@ -1,8 +1,12 @@
-extends Node2D
+extends Control
 
+const _DEATH_EXPLOSION := preload("res://src/Explosion.tscn")
 
 onready var _turret := $Turret
 onready var _enemies := $Enemies
+onready var _game_over_screen := $GameOver
+
+var _game_over := false
 
 func _ready():
 	var enemy := preload("res://src/Enemy.tscn").instance()
@@ -15,8 +19,24 @@ func _add_enemy(enemy:Enemy)->void:
 	
 
 func _on_Enemy_selected(enemy:Enemy)->void:
-	_turret.target = enemy
+	if not _game_over:
+		_turret.target = enemy
 
 
 func _on_EnemyGenerator_spawn_enemy(enemy:Enemy)->void:
-	_add_enemy(enemy)
+	if not _game_over:
+		_add_enemy(enemy)
+
+
+func _on_Turret_dead()->void:
+	_game_over()
+
+
+func _game_over()->void:
+	var explosion:CPUParticles2D = _DEATH_EXPLOSION.instance()
+	explosion.position = _turret.position
+	add_child(explosion)
+	explosion.emitting = true
+	_turret.queue_free()
+	_game_over = true
+	_game_over_screen.visible = true
