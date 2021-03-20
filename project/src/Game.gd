@@ -1,10 +1,9 @@
-extends Control
+extends Node2D
 
 const _DEATH_EXPLOSION := preload("res://src/Explosion.tscn")
 
 onready var _turret := $Turret
 onready var _enemies := $Enemies
-onready var _game_over_screen := $GameOver
 
 var _game_over := false
 
@@ -39,4 +38,3 @@ func _game_over()->void:
 	explosion.emitting = true
 	_turret.queue_free()
 	_game_over = true
-	_game_over_screen.visible = true
