@@ -12,7 +12,7 @@ export var epsilon := 0.01
 export var health := 3
 
 # The node to track toward
-var target : Node2D
+var target : Node2D setget _set_target
 
 onready var _shot_timer := $ShotTimer
 
@@ -58,3 +58,15 @@ func damage():
 	health -= 1
 	if health <= 0:
 		emit_signal("dead")
+
+
+func _set_target(value:Enemy)->void:
+	assert(value!=null)
+	target = value
+	if not value.is_connected("damaged", self, "_on_target_damaged"):
+		value.connect("damaged", self, "_on_target_damaged", [value], CONNECT_ONESHOT)
+	
+
+func _on_target_damaged(new_node:Enemy, orig_target:Enemy)->void:
+	if target == orig_target and target != null:
+		_set_target(new_node)

@@ -2,42 +2,33 @@ class_name Enemy
 extends KinematicBody2D
 
 signal selected
-
-const _TYPES := ["Sub"]
-const _MAX_HEALTH_BY_TYPE := {"Sub":3}
+signal damaged(new_node)
 
 export var speed := 100
-
-var _health := 1
-var _type := ""
-
-onready var _sprite := $Sprite
-
+export var next : PackedScene = null
 
 func _ready()->void:
-	# Copy the collision shape into the area2d clickable shape
-	_copy_shape($CollisionShape2D, $Area2D/CollisionShape2D)
-
-	var type_index := randi()%_TYPES.size()
-	_type = _TYPES[type_index]
-	var max_health_for_type:int = _MAX_HEALTH_BY_TYPE[_type]
-	_health = (randi()%max_health_for_type)+1
-	_sprite.play(_type+str(_health))
-	speed = 70-_health*10
-
-
-func _copy_shape(from:CollisionShape2D, to:CollisionShape2D)->void:
-	to.shape = from.shape
-	to.rotation = from.rotation
+	var area2d := Area2D.new()
+	var collisionshape := CollisionShape2D.new()
+	area2d.add_child(collisionshape)
+	collisionshape.shape = $CollisionShape2D.shape
+	collisionshape.transform = $CollisionShape2D.transform
+	add_child(area2d)
+	area2d.connect("input_event", self, "_on_Area2D_input_event")
+	
+	set_collision_mask_bit(0, false)
+	set_collision_mask_bit(1, true)
 
 
 func damage():
-	_health -= 1
-	if _health <= 0:
+	if next != null:
+		var new_node : Enemy = next.instance()
+		new_node.transform = transform
+		emit_signal("damaged", new_node)
 		queue_free()
 	else:
-		_sprite.play(_type+str(_health))
-		speed += 10
+		emit_signal("damaged", null)
+		queue_free()
 
 
 func _process(delta)->void:
@@ -46,10 +37,6 @@ func _process(delta)->void:
 	if collision and collision.collider.has_method("damage"):
 		collision.collider.damage()
 		queue_free()
-		
-
-func _on_VisibilityNotifier2D_screen_exited():
-	queue_free()
 
 
 func _on_Area2D_input_event(_viewport, event, _shape_idx):

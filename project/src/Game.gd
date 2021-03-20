@@ -7,19 +7,21 @@ onready var _enemies := $Enemies
 
 var _game_over := false
 
-func _ready():
-	var enemy := preload("res://src/Enemy.tscn").instance()
-	enemy.position = Vector2(100,150)
-
 
 func _add_enemy(enemy:Enemy)->void:
 	_enemies.add_child(enemy)
 	var _ignored := enemy.connect("selected", self, "_on_Enemy_selected", [enemy])
+	_ignored = enemy.connect("damaged", self, "_on_Enemy_damaged")
 	
 
 func _on_Enemy_selected(enemy:Enemy)->void:
 	if not _game_over:
 		_turret.target = enemy
+		
+
+func _on_Enemy_damaged(new_node:Enemy)->void:
+	if new_node != null:
+		_add_enemy(new_node)
 
 
 func _on_EnemyGenerator_spawn_enemy(enemy:Enemy)->void:

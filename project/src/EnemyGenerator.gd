@@ -2,7 +2,7 @@ extends Node2D
 
 signal spawn_enemy(enemy)
 
-const _ENEMY := preload("res://src/Enemy.tscn")
+const _ENEMY := preload("res://src/Enemies/Submarine.tscn")
 
 export var radius := 150.0
 
