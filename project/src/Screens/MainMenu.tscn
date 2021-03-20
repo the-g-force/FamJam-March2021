@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/Screens/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://src/Game.tscn" type="PackedScene" id=2]
@@ -99,18 +99,20 @@ tracks/6/keys = {
 "update": 0,
 "values": [ 18.7 ]
 }
-tracks/7/type = "animation"
-tracks/7/path = NodePath("Node2D2/shooting")
+tracks/7/type = "value"
+tracks/7/path = NodePath("torpedo-BIG3:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
-tracks/7/enabled = false
+tracks/7/enabled = true
 tracks/7/keys = {
-"clips": PoolStringArray( "shooting" ),
-"times": PoolRealArray( 2.5 )
+"times": PoolRealArray( 1.6, 1.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("torpedo-BIG3:visible")
+tracks/8/path = NodePath("torpedo-BIG3:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -118,59 +120,20 @@ tracks/8/enabled = true
 tracks/8/keys = {
 "times": PoolRealArray( 1.6, 1.9 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
+"update": 0,
+"values": [ Vector2( 215.985, 308.814 ), Vector2( -52.3549, 168.167 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("torpedo-BIG3:position")
+tracks/9/path = NodePath("torpedo-BIG3:rotation_degrees")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 1.6, 1.9 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 215.985, 308.814 ), Vector2( -52.3549, 168.167 ) ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("torpedo-BIG3:rotation_degrees")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/keys = {
 "times": PoolRealArray( 1.6 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ -149.6 ]
-}
-
-[sub_resource type="Animation" id=3]
-resource_name = "shooting"
-tracks/0/type = "value"
-tracks/0/path = NodePath("torpedo-BIG2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 413.192, 416.782 ), Vector2( 660.713, 492.942 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("torpedo-BIG2:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
 }
 
 [node name="MainMenu" type="Control"]
@@ -181,6 +144,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 game_scene = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -429.0
+margin_top = -355.5
+margin_right = 429.0
+margin_bottom = 355.5
+color = Color( 0.372549, 0.552941, 0.827451, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="PlayButton" type="Button" parent="."]
 anchor_left = 0.5
@@ -219,41 +196,33 @@ autoplay = "turret rotate"
 
 [node name="torpedo-BIG" type="Sprite" parent="."]
 visible = false
-position = Vector2( 574.155, 215.051 )
+position = Vector2( 450.781, 290.648 )
 rotation = -0.605629
 z_index = -1
 texture = ExtResource( 5 )
 
 [node name="torpedo-BIG2" type="Sprite" parent="."]
 visible = false
-position = Vector2( 499.129, 447.61 )
+position = Vector2( 648.422, 497.853 )
 rotation = 0.326377
 z_index = -1
 texture = ExtResource( 5 )
 
 [node name="torpedo-BIG3" type="Sprite" parent="."]
-position = Vector2( 215.985, 308.814 )
+visible = false
+position = Vector2( 56.9688, 225.468 )
 rotation = -2.61101
 z_index = -1
 texture = ExtResource( 5 )
 
-[node name="Node2D2" type="Node2D" parent="."]
-rotation = 1.81689
-
-[node name="shooting" type="AnimationPlayer" parent="Node2D2"]
-anims/shooting = SubResource( 3 )
-
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2( 306.75, 375.565 )
-rotation = -1.96873
+rotation = 0.752761
 
 [node name="turret-BIG" type="Sprite" parent="Node2D"]
 position = Vector2( -0.761444, -1.72195 )
 rotation = -0.676632
 texture = ExtResource( 4 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
