@@ -1,7 +1,7 @@
 class_name Projectile
 extends KinematicBody2D
 
-export var speed := 100
+export var speed := 200
 
 func _physics_process(delta):
 	var collision := move_and_collide(Vector2.RIGHT.rotated(rotation) * speed * delta)

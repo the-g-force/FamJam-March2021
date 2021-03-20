@@ -38,6 +38,7 @@ tracks/1/keys = {
 script = ExtResource( 3 )
 
 [node name="Background" type="Sprite" parent="."]
+z_index = -10
 texture = ExtResource( 5 )
 centered = false
 __meta__ = {
@@ -54,6 +55,7 @@ position = Vector2( 300, 300 )
 radius = 450.0
 
 [node name="Control" type="Control" parent="."]
+visible = false
 margin_right = 600.0
 margin_bottom = 600.0
 __meta__ = {
