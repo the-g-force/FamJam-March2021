@@ -29,11 +29,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98374998"
-     inkscape:cx="196.27091"
-     inkscape:cy="311.50118"
+     inkscape:zoom="7.8699998"
+     inkscape:cx="-315.05402"
+     inkscape:cy="296.24892"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g879"
      showgrid="false"
      units="px"
      inkscape:window-width="1680"
@@ -129,55 +129,65 @@ k851To1wZkZmZEZm5DSS3wFF2We/kUkmVQAAAABJRU5ErkJggg==
        width="39.6875" />
     <g
        id="g879"
-       transform="translate(-169.70987,-13.9856)">
-      <rect
-         inkscape:export-ydpi="96"
-         inkscape:export-xdpi="96"
-         inkscape:export-filename="/home/jkg/Documents/projects/game-jam-family/FamJam-March2021/project/assets/Images/turret.png"
-         y="211.01039"
-         x="72.760414"
-         height="13.229167"
-         width="13.229167"
-         id="rect839"
-         style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke" />
-      <ellipse
-         inkscape:export-ydpi="96"
-         inkscape:export-xdpi="96"
-         inkscape:export-filename="/home/jkg/Documents/projects/game-jam-family/FamJam-March2021/project/assets/Images/turret.png"
-         ry="5.8005638"
-         rx="5.7819891"
-         style="opacity:1;vector-effect:none;fill:#8a908d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.88888836;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-         id="circle830"
-         cx="79.375"
-         cy="218.439" />
-      <path
-         inkscape:export-ydpi="96"
-         inkscape:export-xdpi="96"
-         inkscape:export-filename="/home/jkg/Documents/projects/game-jam-family/FamJam-March2021/project/assets/Images/turret.png"
-         inkscape:connector-curvature="0"
-         id="circle832"
-         d="m 79.375,214.39673 a 5.7819892,4.9213914 0 0 0 -5.758652,4.52678 5.7819892,5.8005637 0 0 0 5.758652,5.31605 5.7819892,5.8005637 0 0 0 5.758651,-5.33343 5.7819892,4.9213914 0 0 0 -5.758651,-4.5094 z"
-         style="opacity:1;vector-effect:none;fill:#727875;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.88931417;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke" />
-      <ellipse
-         inkscape:export-ydpi="96"
-         inkscape:export-xdpi="96"
-         inkscape:export-filename="/home/jkg/Documents/projects/game-jam-family/FamJam-March2021/project/assets/Images/turret.png"
-         ry="3.3836625"
-         rx="3.3728271"
-         cy="218.439"
-         cx="79.375"
-         id="path817"
-         style="opacity:1;vector-effect:none;fill:#00aa44;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.592592;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke" />
-      <rect
-         inkscape:export-ydpi="96"
-         inkscape:export-xdpi="96"
-         inkscape:export-filename="/home/jkg/Documents/projects/game-jam-family/FamJam-March2021/project/assets/Images/turret.png"
-         y="211.01039"
-         x="78.62735"
-         height="2.625504"
-         width="1.495298"
-         id="rect834"
-         style="opacity:1;vector-effect:none;fill:#8a908d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.61099076;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke" />
+       transform="rotate(90,-5.1017209,132.39183)"
+       inkscape:export-filename="/home/jkg/Documents/projects/game-jam-family/FamJam-March2021/project/assets/Images/turret.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         id="g900">
+        <rect
+           style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+           id="rect839"
+           width="13.229167"
+           height="13.229167"
+           x="72.877083"
+           y="211.89658"
+           inkscape:export-filename="/home/jkg/Documents/projects/game-jam-family/FamJam-March2021/project/assets/Images/turret.png"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96" />
+        <ellipse
+           cy="219.32518"
+           cx="79.491669"
+           id="circle830"
+           style="opacity:1;vector-effect:none;fill:#8a908d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.88888836;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+           rx="5.7819891"
+           ry="5.8005638"
+           inkscape:export-filename="/home/jkg/Documents/projects/game-jam-family/FamJam-March2021/project/assets/Images/turret.png"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96" />
+        <path
+           inkscape:transform-center-y="-0.03361923"
+           inkscape:transform-center-x="1.2775307"
+           style="opacity:1;vector-effect:none;fill:#727875;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.88931417;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+           d="m 79.491669,215.28292 a 5.7819892,4.9213914 0 0 0 -5.758652,4.52678 5.7819892,5.8005637 0 0 0 5.758652,5.31605 5.7819892,5.8005637 0 0 0 5.758651,-5.33343 5.7819892,4.9213914 0 0 0 -5.758651,-4.5094 z"
+           id="circle832"
+           inkscape:connector-curvature="0"
+           inkscape:export-filename="/home/jkg/Documents/projects/game-jam-family/FamJam-March2021/project/assets/Images/turret.png"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96" />
+        <ellipse
+           style="opacity:1;vector-effect:none;fill:#00aa44;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.592592;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+           id="path817"
+           cx="79.491669"
+           cy="219.32518"
+           rx="3.3728271"
+           ry="3.3836625"
+           inkscape:export-filename="/home/jkg/Documents/projects/game-jam-family/FamJam-March2021/project/assets/Images/turret.png"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96" />
+        <rect
+           inkscape:transform-center-y="-0.03361923"
+           inkscape:transform-center-x="-6.2195575"
+           style="opacity:1;vector-effect:none;fill:#8a908d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.61099076;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+           id="rect834"
+           width="1.495298"
+           height="2.625504"
+           x="78.744019"
+           y="211.89658"
+           inkscape:export-filename="/home/jkg/Documents/projects/game-jam-family/FamJam-March2021/project/assets/Images/turret.png"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96" />
+      </g>
     </g>
   </g>
 </svg>
