@@ -52,10 +52,12 @@ func _fire():
 	projectile.rotation = rotation
 	get_parent().add_child(projectile)
 	_shot_timer.start()
+	$ShootSound.play()
 
 
 func damage():
 	health -= 1
+	$HurtSound.play()
 	if health <= 0:
 		emit_signal("dead")
 
