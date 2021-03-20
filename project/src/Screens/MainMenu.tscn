@@ -1,14 +1,177 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/Screens/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://src/Game.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/fonts/RuslanDisplay-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://assets/Images/turret-BIG.png" type="Texture" id=4]
-[ext_resource path="res://assets/music/daniel_song.ogg" type="AudioStream" id=5]
+[ext_resource path="res://assets/Images/torpedo-BIG.png" type="Texture" id=5]
+[ext_resource path="res://assets/music/daniel_song.ogg" type="AudioStream" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 58
 font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "turret rotate"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node2D:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.5, 1.6, 2.5 ),
+"transitions": PoolRealArray( 4.43828, 2.63902, 2.37841 ),
+"update": 0,
+"values": [ 0.0, -112.8, 53.4 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("torpedo-BIG:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.5, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 406.719, 317.647 ), Vector2( 644.655, 171.853 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("torpedo-BIG:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -34.7 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("torpedo-BIG:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("torpedo-BIG2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 2.5, 2.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("torpedo-BIG2:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 2.5, 2.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 415.152, 419.349 ), Vector2( 657.753, 500.993 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("torpedo-BIG2:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 2.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 18.7 ]
+}
+tracks/7/type = "animation"
+tracks/7/path = NodePath("Node2D2/shooting")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = false
+tracks/7/keys = {
+"clips": PoolStringArray( "shooting" ),
+"times": PoolRealArray( 2.5 )
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("torpedo-BIG3:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 1.6, 1.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("torpedo-BIG3:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 1.6, 1.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 215.985, 308.814 ), Vector2( -52.3549, 168.167 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("torpedo-BIG3:rotation_degrees")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 1.6 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -149.6 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "shooting"
+tracks/0/type = "value"
+tracks/0/path = NodePath("torpedo-BIG2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 413.192, 416.782 ), Vector2( 660.713, 492.942 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("torpedo-BIG2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -18,11 +181,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 game_scene = ExtResource( 2 )
-
-[node name="turret-BIG" type="Sprite" parent="."]
-position = Vector2( 296.658, 377.342 )
-rotation = -0.760963
-texture = ExtResource( 4 )
 
 [node name="PlayButton" type="Button" parent="."]
 anchor_left = 0.5
@@ -54,8 +212,51 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+pause_mode = 2
+autoplay = "turret rotate"
+"anims/turret rotate" = SubResource( 2 )
+
+[node name="torpedo-BIG" type="Sprite" parent="."]
+visible = false
+position = Vector2( 574.155, 215.051 )
+rotation = -0.605629
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="torpedo-BIG2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 499.129, 447.61 )
+rotation = 0.326377
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="torpedo-BIG3" type="Sprite" parent="."]
+position = Vector2( 215.985, 308.814 )
+rotation = -2.61101
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Node2D2" type="Node2D" parent="."]
+rotation = 1.81689
+
+[node name="shooting" type="AnimationPlayer" parent="Node2D2"]
+anims/shooting = SubResource( 3 )
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 306.75, 375.565 )
+rotation = -1.96873
+
+[node name="turret-BIG" type="Sprite" parent="Node2D"]
+position = Vector2( -0.761444, -1.72195 )
+rotation = -0.676632
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 5 )
+stream = ExtResource( 6 )
 autoplay = true
 bus = "Music"
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
