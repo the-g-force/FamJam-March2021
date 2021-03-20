@@ -1,6 +1,7 @@
 extends Node2D
 
 signal dead
+signal damaged(health_remaining)
 
 const _Projectile := preload("res://src/Projectile.tscn")
 
@@ -58,6 +59,7 @@ func _fire():
 func damage():
 	health -= 1
 	$HurtSound.play()
+	emit_signal("damaged", health)
 	if health <= 0:
 		emit_signal("dead")
 
@@ -69,6 +71,6 @@ func _set_target(value:Enemy)->void:
 		value.connect("damaged", self, "_on_target_damaged", [value], CONNECT_ONESHOT)
 	
 
-func _on_target_damaged(new_node:Enemy, orig_target:Enemy)->void:
+func _on_target_damaged(new_node:Enemy, _score, orig_target:Enemy)->void:
 	if target == orig_target and new_node != null:
 		_set_target(new_node)

@@ -4,8 +4,12 @@ const _DEATH_EXPLOSION := preload("res://src/Explosion.tscn")
 
 onready var _turret := $Turret
 onready var _enemies := $Enemies
+onready var _game_over_score_label := $Control/GameOver/VBoxContainer2/ScoreLabel
+onready var _health_label := $HUD/Health
+onready var _score_label := $HUD/Score
 
 var _is_game_over := false
+var _score := 0
 
 
 func _add_enemy(enemy:Enemy)->void:
@@ -19,7 +23,9 @@ func _on_Enemy_selected(enemy:Enemy)->void:
 		_turret.target = enemy
 		
 
-func _on_Enemy_damaged(new_node:Enemy)->void:
+func _on_Enemy_damaged(new_node:Enemy, score)->void:
+	_score += score
+	_score_label.text = "Score: "+str(_score)
 	if new_node != null:
 		_add_enemy(new_node)
 
@@ -40,4 +46,9 @@ func _game_over()->void:
 	explosion.emitting = true
 	_turret.queue_free()
 	_is_game_over = true
+	_game_over_score_label.text = "You got "+str(_score)+" points!"
 	$AnimationPlayer.play("GameOver")
+
+
+func _on_Turret_damaged(health_remaining:int)->void:
+	_health_label.text = "Health: "+str(health_remaining)

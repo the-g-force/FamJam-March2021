@@ -12,6 +12,7 @@ height = 46.0004
 script = ExtResource( 2 )
 speed = 60
 next = ExtResource( 3 )
+score = 50
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )

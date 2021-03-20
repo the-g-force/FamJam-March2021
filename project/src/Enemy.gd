@@ -2,10 +2,11 @@ class_name Enemy
 extends KinematicBody2D
 
 signal selected
-signal damaged(new_node)
+signal damaged(new_node, score)
 
 export var speed := 100
 export var next : PackedScene = null
+export var score := 0
 
 func _ready()->void:
 	var area2d := Area2D.new()
@@ -24,10 +25,10 @@ func damage():
 	if next != null:
 		var new_node : Enemy = next.instance()
 		new_node.transform = transform
-		emit_signal("damaged", new_node)
+		emit_signal("damaged", new_node, score)
 		queue_free()
 	else:
-		emit_signal("damaged", null)
+		emit_signal("damaged", null, score)
 		queue_free()
 
 
