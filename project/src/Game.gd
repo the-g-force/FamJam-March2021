@@ -5,7 +5,7 @@ const _DEATH_EXPLOSION := preload("res://src/Explosion.tscn")
 onready var _turret := $Turret
 onready var _enemies := $Enemies
 
-var _game_over := false
+var _is_game_over := false
 
 
 func _add_enemy(enemy:Enemy)->void:
@@ -15,7 +15,7 @@ func _add_enemy(enemy:Enemy)->void:
 	
 
 func _on_Enemy_selected(enemy:Enemy)->void:
-	if not _game_over:
+	if not _is_game_over:
 		_turret.target = enemy
 		
 
@@ -25,7 +25,7 @@ func _on_Enemy_damaged(new_node:Enemy)->void:
 
 
 func _on_EnemyGenerator_spawn_enemy(enemy:Enemy)->void:
-	if not _game_over:
+	if not _is_game_over:
 		_add_enemy(enemy)
 
 
@@ -39,4 +39,4 @@ func _game_over()->void:
 	add_child(explosion)
 	explosion.emitting = true
 	_turret.queue_free()
-	_game_over = true
+	_is_game_over = true

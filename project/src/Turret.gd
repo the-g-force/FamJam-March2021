@@ -68,5 +68,5 @@ func _set_target(value:Enemy)->void:
 	
 
 func _on_target_damaged(new_node:Enemy, orig_target:Enemy)->void:
-	if target == orig_target and target != null:
+	if target == orig_target and new_node != null:
 		_set_target(new_node)
