@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/daniel_song.ogg-4e5fb34ae923d35c0fd1c3afd7343166.oggstr"
+
+[deps]
+
+source_file="res://assets/music/daniel_song.ogg"
+dest_files=[ "res://.import/daniel_song.ogg-4e5fb34ae923d35c0fd1c3afd7343166.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

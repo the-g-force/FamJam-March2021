@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/Screens/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://src/Game.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/fonts/RuslanDisplay-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://assets/Images/turret-BIG.png" type="Texture" id=4]
+[ext_resource path="res://assets/music/daniel_song.ogg" type="AudioStream" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 58
@@ -21,7 +22,6 @@ game_scene = ExtResource( 2 )
 [node name="turret-BIG" type="Sprite" parent="."]
 position = Vector2( 296.658, 377.342 )
 rotation = -0.760963
-scale = Vector2( 1, 1 )
 texture = ExtResource( 4 )
 
 [node name="PlayButton" type="Button" parent="."]
@@ -53,4 +53,9 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+bus = "Music"
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
