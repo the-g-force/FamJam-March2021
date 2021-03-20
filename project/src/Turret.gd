@@ -9,13 +9,13 @@ export var rotation_speed := 0.1
 export var epsilon := 0.01
 
 # The node to track toward
-var target : Node2D setget _set_target
+var target : Node2D
 
 onready var _shot_timer := $ShotTimer
 
 
 func _physics_process(_delta):
-	if target == null:
+	if target == null or not is_instance_valid(target):
 		return
 	
 	var target_rotation := _compute_desired_rotation()
@@ -25,9 +25,8 @@ func _physics_process(_delta):
 	else:
 		rotate(min(full_amount, rotation_speed))
 	
-	if _shot_timer.time_left == 0 and abs(rotation - target_rotation) < epsilon:
-			_fire()
-	
+	if _shot_timer.time_left == 0 and abs(_short_angle_dist(rotation, target_rotation)) < epsilon:
+		_fire()
 	
 
 func _compute_desired_rotation()->float:
@@ -54,14 +53,3 @@ func _fire():
 
 func damage():
 	print("I WAS HURT")
-
-
-func _set_target(value:Node2D)->void:
-	target = value
-	if not value.is_connected("tree_exiting", self, "_on_target_tree_exiting"):
-		var _ignored := target.connect("tree_exiting", self, "_on_target_tree_exiting", [target], CONNECT_ONESHOT)
-
-
-func _on_target_tree_exiting(exiting_target):
-	if target == exiting_target:
-		target = null
