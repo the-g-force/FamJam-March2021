@@ -1,12 +1,32 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/Screens/SplashScreen.gd" type="Script" id=1]
 [ext_resource path="res://src/Screens/MainMenu.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/fonts/RuslanDisplay-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/Images/sub1.png" type="Texture" id=4]
+[ext_resource path="res://assets/Images/sub2.png" type="Texture" id=5]
+[ext_resource path="res://assets/Images/sub3.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
 font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "sub"
+length = 2.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("sub1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8, 2.5 ),
+"transitions": PoolRealArray( 0.466517, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -76, 450 ), Vector2( 316.266, 450 ), Vector2( 1100, 450 ) ]
+}
 
 [node name="Splashscreen" type="Control"]
 anchor_right = 1.0
@@ -18,6 +38,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 main_menu_scene = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 607.0
+margin_bottom = 602.0
+color = Color( 0.372549, 0.552941, 0.827451, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="."]
 anchor_left = 0.5
@@ -37,3 +65,19 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="sub1" type="Sprite" parent="."]
+position = Vector2( 1100, 450 )
+texture = ExtResource( 4 )
+
+[node name="sub3" type="Sprite" parent="sub1"]
+position = Vector2( -402.611, 55.3264 )
+texture = ExtResource( 6 )
+
+[node name="sub2" type="Sprite" parent="sub1"]
+position = Vector2( -186.381, -328.433 )
+texture = ExtResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "sub"
+anims/sub = SubResource( 2 )
