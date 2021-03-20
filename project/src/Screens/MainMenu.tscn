@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/Screens/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://src/Game.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/fonts/RuslanDisplay-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/Images/turret-BIG.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 58
@@ -17,15 +18,21 @@ __meta__ = {
 }
 game_scene = ExtResource( 2 )
 
+[node name="turret-BIG" type="Sprite" parent="."]
+position = Vector2( 296.658, 377.342 )
+rotation = -0.760963
+scale = Vector2( 1, 1 )
+texture = ExtResource( 4 )
+
 [node name="PlayButton" type="Button" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -37.0
-margin_top = -10.0
+margin_top = -92.0
 margin_right = 37.0
-margin_bottom = 10.0
+margin_bottom = -72.0
 text = "Play Now!"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -43,4 +50,7 @@ margin_bottom = -82.5
 custom_fonts/font = SubResource( 1 )
 text = "Turretle 2000"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
