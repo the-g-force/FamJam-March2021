@@ -23,6 +23,7 @@ func _ready()->void:
 	var max_health_for_type:int = _MAX_HEALTH_BY_TYPE[_type]
 	_health = (randi()%max_health_for_type)+1
 	_sprite.play(_type+str(_health))
+	speed = 70-_health*10
 
 
 func _copy_shape(from:CollisionShape2D, to:CollisionShape2D)->void:
@@ -36,6 +37,7 @@ func damage():
 		queue_free()
 	else:
 		_sprite.play(_type+str(_health))
+		speed += 10
 
 
 func _process(delta)->void:
